@@ -111,10 +111,7 @@ class MMCD_Downloader:
                 print("  failed to download...")
 
 if __name__ == '__main__':
-    downloader = HMDB_Downloader()
-    downloader.run('/Users/garythompson')
-
-    # downloader = BMRB_Downloader()
+    # downloader = HMDB_Downloader()
     # downloader.run('/Users/garythompson')
 
     downloader = BMRB_Downloader()
