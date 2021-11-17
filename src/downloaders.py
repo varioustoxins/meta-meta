@@ -73,6 +73,7 @@ class BMRB_Downloader:
 
         for i,file in enumerate(parser.files):
             file_url = URL + file
+            file =  pathlib.Path(file).parts[-1]
             target = pathlib.Path(download_directory, file)
             print (f'download {file} {i+1} of {len(parser.files)}')
             urllib.request.urlretrieve(file_url, target)
