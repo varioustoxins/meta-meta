@@ -62,7 +62,7 @@ class BMRB_Downloader:
                     self.files.append(href)
 
     def run(self,directory):
-        URL = 'http://www.bmrb.wisc.edu/ftp/pub/bmrb/metabolomics/NMR_STAR_experimental_entries/'
+        URL = 'http://bmrb.io/ftp/pub/bmrb/metabolomics/entry_directories/'
         bmrb_directory = urllib.request.urlopen(URL).read().decode('utf-8')
 
         parser = BMRB_Downloader.BMRB_Directory_Parser()
