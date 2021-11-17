@@ -58,7 +58,9 @@ class BMRB_Downloader:
         def handle_starttag(self, tag, attrs):
             if tag == 'a':
                 href  = [elem for elem in attrs if elem[0] == 'href'][0][1]
-                if href.endswith('.str'):
+                if href.startswith('bmst'):
+                    file_name = f'{attrs[0][1][:-1]}.str'
+                    href = f'{href}{file_name}'
                     self.files.append(href)
 
     def run(self,directory):
