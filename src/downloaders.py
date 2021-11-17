@@ -10,8 +10,8 @@ from html.parser import HTMLParser
 class HMDB_Downloader:
 
     def get_file_name_from_url(self, url):
-        url_path = pathlib.PurePosixPath(urllib.parse.urlparse(URL).path)
-        url_path.name.name
+        url_path = pathlib.PurePosixPath(urllib.parse.urlparse(url).path)
+        return  url_path.name.name
 
     def run(self,directory):
 
