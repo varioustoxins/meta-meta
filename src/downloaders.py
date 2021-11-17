@@ -117,5 +117,8 @@ if __name__ == '__main__':
     # downloader = BMRB_Downloader()
     # downloader.run('/Users/garythompson')
 
+    downloader = BMRB_Downloader()
+    downloader.run('.')
+
     # downloader = MMCD_Downloader()
     # downloader.run('/Users/garythompson')
