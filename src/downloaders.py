@@ -11,7 +11,7 @@ class HMDB_Downloader:
 
     def get_file_name_from_url(self, url):
         url_path = pathlib.PurePosixPath(urllib.parse.urlparse(url).path)
-        return  url_path.name.name
+        return url_path
 
     def run(self,directory):
 
@@ -28,7 +28,7 @@ class HMDB_Downloader:
 
     def download_and_extract_xml_zip(self, URL, directory):
 
-        file = self.get_path_from_url(URL)
+        file = self.get_file_name_from_url(URL).name
         zip_target = pathlib.Path(directory, file)
 
         target = pathlib.Path(directory)
